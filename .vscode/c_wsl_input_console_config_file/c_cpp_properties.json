@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/../time_series_db/dev/include",
+                "${workspaceFolder}/../time_series_db/dev/lib"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "clang-x64",
+            "compilerArgs": [
+                "-lspeedbee",
+                "-pthread",
+                "-ldl",
+                "-lm"
+            ]
+        }
+    ],
+    "version": 4
+}

@@ -1,0 +1,15 @@
+{
+  "editor.renderWhitespace": "all",
+  "editor.tabSize": 2,
+	"editor.insertSpaces": false,
+	// "editor.quickSuggestions": {
+	// 	"other": true,
+	// 	"all":true,
+	// 	"comments": false,
+	// 	"strings": false
+	// },
+
+	// "editor.quickSuggestions": true,
+	// "editor.quickSuggestionsDelay": 10,
+
+}

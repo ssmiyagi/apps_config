@@ -1,0 +1,271 @@
+{
+  // IntelliSense を使用して利用可能な属性を学べます。
+  // 既存の属性の説明をホバーして表示します。
+  // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Run AVA test",
+      "program": "${workspaceRoot}/node_modules/ava/profile.js",
+      "args": [
+        "${file}"
+      ],
+      "skipFiles": [
+        "<node_internals>/**/*.js"
+      ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "electron ava test",
+      "program": "${workspaceRoot}/node_modules/electron-ava/profile.js",
+      "args": [
+        "${file}"
+      ],
+      "skipFiles": [
+        "<node_internals>/**/*.js"
+      ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Run AVA test serially",
+      "program": "${workspaceRoot}/node_modules/ava/profile.js",
+      "args": [
+        "--serial",
+        "${file}"
+      ],
+      "skipFiles": [
+        "<node_internals>/**/*.js"
+      ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Run AVARON test serially",
+      "program": "${workspaceRoot}/node_modules/avaron/profile.js",
+      "args": [
+        "--serial",
+        "${file}"
+      ],
+      "skipFiles": [
+        "<node_internals>/**/*.js"
+      ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "test",
+      "program": "${workspaceFolder}\\test.js"
+    },
+    {
+      "name": "Debug Main Process",
+      "type": "node",
+      "request": "launch",
+      "env": {"NODE_ENV": "development"},
+      "cwd": "${workspaceRoot}",
+      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
+      "windows": {
+        "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron.cmd"
+      },
+      "protocol": "inspector",
+      "args" : ["${workspaceRoot}","--force","--goyodebug"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Electron: Main",
+      "protocol": "inspector",
+      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
+      "runtimeArgs": [
+          "--remote-debugging-port=9223",
+          // "test.bksx",
+          ".",
+          "--force",
+          "--goyodebug"
+      ],
+      "windows": {
+          "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron.cmd"
+      },
+      "sourceMaps": true,
+      "outputCapture": "std",
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Electron: Main2",
+      "protocol": "inspector",
+      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
+      "runtimeArgs": [
+          "--remote-debugging-port=9223",
+          ".",
+          "--force",
+          "--goyodebug"
+      ],
+      "windows": {
+          "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron.cmd"
+      },
+      "sourceMaps": true,
+      "outputCapture": "std",
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Electron: custom",
+      "protocol": "inspector",
+      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
+      "windows": {
+          "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron.cmd"
+      },
+      "runtimeArgs": [
+          "--remote-debugging-port=9223",
+          "./test-electron-main.js"
+      ],
+      "sourceMaps": true,
+      "outputCapture": "std",
+    },
+    // {
+    //   "type": "node",
+    //   "request": "launch",
+    //   "name": "Electron: Main-test",
+    //   "protocol": "inspector",
+    //   "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
+    //   "runtimeArgs": [
+    //       "--remote-debugging-port=9223",
+    //       ".",
+    //       "--force",
+    //       "--goyodebug"
+    //   ],
+    //   "windows": {
+    //       "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron.cmd"
+    //   },
+    //   "webRoot": "${workspaceRoot}",
+    //   "sourceMaps": true,
+    //   // "sourceMapPathOverrides": {
+    //     // "file:///":"${workspaceRoot}"
+    //     // "goyop:///": "${webRoot}/*"
+    //   //   // "goyop:///": "contents/*"
+    //   //   "goyop:///./C:/goyo/new/source/GOYO19/goyo-ui/*": "${webRoot}/*"  // 動く
+    //   //   // "webpack:///./C:/myproject/*": "${webRoot}/*"  // 動く
+    //   // }
+    // },
+    {
+      "name": "Electron: Renderer-test",
+      "type": "chrome",
+      "request": "attach",
+      "sourceMaps": true,
+      "port": 9223,
+      // "webRoot": "C:/goyo/new/source/GOYO19/goyo-ui",
+      "webRoot": "${workspaceRoot}",
+      "timeout": 30000,
+      "pathMapping": {
+        "file:///":"${workspaceRoot}/*",
+      },
+      "sourceMapPathOverrides": {
+        "file:///":"${webRoot}/*",
+        "goyop:///":"${workspaceRoot}/",
+        // "webpack:///./C:/myproject/*": "${webRoot}/*"  // 動く
+        // "C:/goyo/new/source/GOYO19/goyo-ui/*": "${webRoot}/*"  // 動く
+        // "goyop:///contents/*": "${webRoot}/*"  // 動く
+        // "goyop:": "file:" 
+        // "goyop:///./C:/goyo/new/source/GOYO19/goyo-ui/*": "${webRoot}/*"  // 動く
+        // "goyop:///": "${webRoot}/contents/*"  // 動く
+        // "goyop:///": "${webRoot}/*"  // 動く
+        // "goyop://": "C:/goyo/new/source/GOYO19/goyo-ui"  // 動く
+        // "goyop:\\\\:": "${webRoot}/contents/*"  // 動く
+        // "goyop:///./C:/goyo-ui/*": "${webRoot}/*"
+        // "goyop:\\\\": "${webRoot}/*"
+        // "goyop:\\\\": "${webRoot}/*"
+        // "goyop:///": "contents/*"
+      }
+    },
+    {
+      "name": "Electron: Renderer",
+      "type": "chrome",
+      "request": "attach",
+      "port": 9223,
+      "webRoot": "${workspaceRoot}",
+      "timeout": 30000
+    },
+    {
+      "name": "(Windows) Attach",
+      "type": "cppvsdbg",
+      "request": "attach",
+      "processId": "${command:pickProcess}",
+      // "preLaunchTask": "1secSleep"
+    },
+    {
+      "name": "delay(Windows) Attach",
+      "type": "cppvsdbg",
+      "request": "attach",
+      "processName": "accessor.exe",
+      "preLaunchTask": "1secSleep"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Print Process",
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron.cmd",
+      "args": [
+        ".",
+        "--force",
+        "--goyodebug"
+      ]
+    },
+    {
+      "name": "Debug Renderer Process",
+      "type": "chrome",
+      "request": "launch",
+      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
+      // Use the following for Windows
+      "windows": {
+        "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron.cmd",
+      },
+      "runtimeArgs": [
+        "${workspaceRoot}",
+        "--remote-debugging-port=9222",
+        "--force"
+      ],
+      "webRoot": "${workspaceRoot}"
+    }
+  ],
+  "compounds": [
+    {
+        "name": "Electron: main + render",
+        "configurations": [
+            "Electron: Main",
+            "Electron: Renderer"
+        ]
+    },
+    {
+      "name": "Electron: main + accessor",
+      "configurations": [
+          "Electron: Main",
+          "delay(Windows) Attach"
+      ]
+    },
+    {
+      "name": "Electron: All-2",
+      "configurations": [
+          "Electron: Main-test",
+          "Electron: Renderer-test"
+      ]
+    },
+    {
+      "name": "Electron: customAll",
+      "configurations": [
+          "Electron: custom",
+          "Electron: Renderer"
+      ]
+    },
+    {
+      "name": "Electron: double",
+      "configurations": [
+          "Electron: Main",
+          "Electron: Main2"
+      ]
+    }
+]
+}

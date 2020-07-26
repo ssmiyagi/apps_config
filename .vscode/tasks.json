@@ -1,0 +1,151 @@
+{
+// tasks.json 形式の詳細についての資料は、
+  // https://go.microsoft.com/fwlink/?LinkId=733558 をご覧ください
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "install",
+      "problemMatcher": []
+    },
+    {
+      "label": "echo test",
+      "type": "shell",
+      "command": "echo",
+      "group": "test",
+      "args": [
+        "hello"
+      ]
+    },
+    {
+      "label": "1secSleep",
+      "type": "shell",
+      "command": "sleep",
+      "group": "test",
+      "args": [
+        "1"
+      ]
+    },
+    {
+      "type": "npm",
+      "script": "testAlbumContentWatch",
+      "problemMatcher": []
+    },
+    {
+      "label": "old-bookrack-accessor-build",
+      "type": "shell",
+      "command": "npm",
+      "group": "build",
+      "args": [
+        "run",
+        "buildThenInstall"
+      ],
+      "options": {
+        "cwd": "${workspaceRoot}/node_modules/old-goyo-bookrack-accessor"
+      },
+      "problemMatcher": [
+        "$node-sass"
+      ]
+    },
+    {
+      "label": "bookrack-accessor-build",
+      "type": "shell",
+      "command": "npm",
+      "group": "build",
+      "args": [
+        "run",
+        "buildThenInstall"
+      ],
+      "options": {
+        "cwd": "${workspaceRoot}/node_modules/goyo-bookrack-accessor"
+      },
+      "problemMatcher": [
+        "$node-sass"
+      ]
+    },
+    {
+      "label": "bookrack-accessor-and_db_manager_build",
+      "group": "build",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "in_gbaccessor_dbmaneger_build",
+        "bookrack-accessor-build"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "in_gbaccessor_dbmaneger_build",
+      "type": "shell",
+      "command": "npm",
+      "group": "build",
+      "args": [
+        "run",
+        "dbuild"
+      ],
+      "options": {
+        "cwd": "${workspaceRoot}/node_modules/goyo-bookrack-accessor/node_modules/goyo-db-manager"
+      },
+      "problemMatcher": [
+        "$node-sass"
+      ]
+    },
+    {
+      "label": "npm run test",
+      "type": "shell",
+      "command": "npm",
+      "group": "test",
+      "args": [
+        "run",
+        "test"
+      ],
+      "problemMatcher": [
+        "$node-sass"
+      ]
+    },
+    {
+      "label": "old-bookrack-accessor-postInstall",
+      "type": "shell",
+      "command": "npx",
+      "group": "postInstall",
+      "args": [
+        "npm",
+        "run",
+        "postinstall"
+      ],
+      "options": {
+        "cwd": "${workspaceRoot}/node_modules/old-goyo-bookrack-accessor"
+      },
+      "problemMatcher": [
+        "$node-sass"
+      ]
+    },
+    {
+      "type": "npm",
+      "script": "testConstruction",
+      "problemMatcher": [
+        "$node-sass"
+      ]
+    },
+    {
+      "type": "npm",
+      "script": "testAlbumContent",
+      "problemMatcher": [
+        "$node-sass"
+      ]
+    },
+    {
+      "type": "npm",
+      "script": "testOldList",
+      "problemMatcher": [
+        "$node-sass"
+      ]
+    },
+    {
+      "type": "npm",
+      "script": "testMigration",
+      "problemMatcher": [
+        "$node-sass"
+      ]
+    }
+  ]
+}
