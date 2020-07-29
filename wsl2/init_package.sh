@@ -6,3 +6,4 @@ sudo apt -y install fish
 sudo apt -y install vim
 sudo apt -y install curl
 sudo apt -y install git
+sudo apt -y install wget
