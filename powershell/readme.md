@@ -3,7 +3,7 @@
 ## powershellのUtilのインストール方法
 
 1. powershellでinstall_powershell_module.ps1を実行してpowershellプラグインをインストールしてください
-2. first_setup.batファイルの実行(管理者権限が必要です。実行するだけで昇格するので、そのままクリックしてください)
+2. first_setup.batファイルの実行(管理者権限が必要です。実行するだけで昇格するので、クリックしてください)
 
 ### 依存モジュール
 ```
