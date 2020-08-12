@@ -17,6 +17,11 @@ choloteyを使っていれば以下のコマンドを実行するだけでいい
 choco install peco fzf -y
 ```
 
+## powershellのデフォルト動作変更
+
+1. tabを押すとbashのように保管が聞くようになります。
+1. gitブランチの場合は今いる場所が表示されるようになります
+
 ## 便利コマンド
 
 ### ディレクトリリストの取得
@@ -49,3 +54,25 @@ gcbl
 ```
 git checkout branche local name
 
+### Gitブランチのリスト
+```
+gba
+```
+git brache all
+
+### Gitのローカルブランチがどのリポートリポジトリと紐づいているか
+```
+gbv
+```
+git brache -vのコマンドの意味
+
+## 改造用コマンド
+### vimでPowershellファイルを編集する
+```
+vp
+```
+
+### vimで(ブックマーク、コマンド)リストを開く
+```
+vpecofile
+```
