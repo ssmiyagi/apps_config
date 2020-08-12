@@ -100,7 +100,7 @@ function addh([string] $dir){
   pecoadInit
   $add_dir
   if([String]::IsNullOrEmpty($dir)){
- kkkkkkkkkkk   $add_dir =  (pwd).path
+    $add_dir =  (pwd).path
   }else{
     $add_dir = $dir
   }
