@@ -4,7 +4,7 @@ $lancher_dir = "C:\tools\launcher"
 $peco_folder = $HOME + "\Documents\WindowsPowerShell\peco"
 
 $peco_active_dir = $peco_folder + "\active_dir.txt"
-$peco_bookmark   = $peco_folder + "\peco\bookmark_dir.txt"
+$peco_bookmark   = $peco_folder + "\bookmark_dir.txt"
 $peco_file_history = $peco_folder + "\file_open_history.txt"
 $peco_dir_history  = $peco_folder + "\directory_open_history.txt"
 $peco_app_list     = $peco_folder + "\app_list.txt"
