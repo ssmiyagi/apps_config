@@ -75,6 +75,8 @@ set imdisable
 set nowrap
 "文字コードをUFT-8に設定
 set encoding=utf-8
+"改行コードをLFに設定
+set ff=unix
 " バックアップファイルを作らない
 set nobackup
 " スワップファイルを作らない
