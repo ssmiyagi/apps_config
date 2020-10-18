@@ -1,0 +1,186 @@
+// 既定値を上書きするには、このファイル内にキー バインドを挿入します
+[  {
+  "key": "shift+enter",
+  "command": "extension.jumpy-word",
+  "when": "editorTextFocus"
+},
+{
+  "key": "shift+f+enter",
+  "command": "extension.jumpy-line",
+  "when": "editorTextFocus"
+},
+{
+  "key": "Escape",
+  "command": "extension.jumpy-exit",
+  "when": "editorTextFocus && jumpy.isJumpyMode"
+},
+{
+  "key": "ctrl+enter",
+  "command": "extension.autoend",
+  "when": "editorTextFocus"
+},
+{
+  "key": "oem_1",
+  "command": "-extension.autoend",
+  "when": "editorTextFocus"
+},
+{
+  "key": "ctrl+shift+alt+m",
+  "command": "markJump.jumpToMarks"
+},
+{
+  "key": "ctrl+alt+m",
+  "command": "-markJump.jumpToMarks"
+},
+{
+  "key": "ctrl+shift+alt+i",
+  "command": "xmlTools.formatAsXml"
+},
+{
+  "key": "ctrl+l",       "command": "workbench.action.terminal.focus",
+                         "when": "editorTextFocus"
+},
+{
+  "key": "ctrl+l",            "command": "workbench.action.focusFirstEditorGroup",
+                              "when": "terminalFocus"
+},
+{
+  "key": "ctrl+up",
+  "command": "workbench.action.terminal.scrollUp",
+  "when": "terminalFocus"
+},
+{
+  "key": "ctrl+down",
+  "command": "workbench.action.terminal.scrollDown",
+  "when": "terminalFocus"
+},
+{
+  "key": "ctrl+pageup",
+  "command": "workbench.action.terminal.scrollUpPage",
+  "when": "terminalFocus"
+},
+{
+  "key": "ctrl+pageDown",
+  "command": "workbench.action.terminal.scrollDownPage",
+  "when": "terminalFocus"
+},
+{ "key": "ctrl+k",                "command": "workbench.action.terminal.clear",
+  "when": "terminalFocus" },
+{
+  "key": "ctrl+alt+pageup",
+  "command": "-workbench.action.terminal.scrollUp",
+  "when": "terminalFocus"
+},
+{ 
+  "key": "ctrl+shift+c",          
+  "command": "copy-word.copy",
+  "when": "editorTextFocus"      
+},
+{
+  "key": "shift+enter",
+  "command": "-colonize.endline",
+  "when": "editorTextFocus"
+},
+{
+  "key": "ctrl+enter",
+  "command": "colonize.newline",
+  "when": "editorTextFocus"
+},
+{
+  "key": "alt+enter",
+  "command": "-colonize.newline",
+  "when": "editorTextFocus"
+},
+{
+  "key": "alt+shift+down",
+  "command": "createCursor",
+  "when": "editorTextFocus"
+},
+{
+  "key": "ctrl+alt+down",
+  "command": "-bracket-jumper.ascendRight",
+  "when": "editorTextFocus"
+},
+{
+  "key": "ctrl+shift+x",
+  "command": "-workbench.view.extensions"
+},
+{
+  "key":"ctrl+shift+F9",
+  "command": "workbench.debug.viewlet.action.removeAllBreakpoints"
+},
+{
+  "key": "alt+k",
+  "command": "bookmarks.toggle",
+  "when": "editorTextFocus"
+},
+{
+  "key": "ctrl+alt+k",
+  "command": "-bookmarks.toggle",
+  "when": "editorTextFocus"
+},
+{
+  "key": "alt+l",
+  "command": "bookmarks.jumpToNext",
+  "when": "editorTextFocus"
+},
+{
+  "key": "ctrl+alt+l",
+  "command": "-bookmarks.jumpToNext",
+  "when": "editorTextFocus"
+},
+{
+  "command": "toggleVim",
+  "key": "ctrl+shift+v"
+},
+{
+  "key": "shift+alt+u",
+  "command": "-turboConsoleLog.uncommentAllLogMessages"
+},
+{
+  "key": "f2",
+  "command": "workbench.action.tasks.runTask",
+  "when": "editorTextFocus"
+},
+{
+  "key": "ctrl+insert",
+  "command": "-editor.action.clipboardCopyAction",
+  "when": "textInputFocus"
+},
+{
+  "key": "ctrl+alt+n",
+  "command": "workbench.action.files.newUntitledFile"
+},
+{
+  "key": "ctrl+n",
+  "command": "-workbench.action.files.newUntitledFile"
+},
+{
+  "key": "backspace",
+  "command": "list.focusPageDown",
+  "when": "listFocus && !inputFocus"
+},
+{
+  "key": "ctrl+d",
+  "command": "-list.focusPageDown",
+  "when": "listFocus && !inputFocus"
+},
+{
+  "key": "ctrl+d",
+  "command": "-extension.vim_ctrl+d",
+  "when": "editorTextFocus && vim.active && !inDebugRepl"
+},
+{
+  "key": "shift+alt+l",
+  "command": "-bookmarks.expandSelectionToNext",
+  "when": "editorTextFocus"
+},
+{
+  "key": "shift+alt+l",
+  "command": "turboConsoleLog.displayLogMessage"
+},
+{
+  "key": "ctrl+alt+l",
+  "command": "-turboConsoleLog.displayLogMessage"
+}
+]
