@@ -80,11 +80,11 @@ vk1C & Space::
       Process, Close, KGASUKE.BIN
       return 
 ;;UI起動
-Alt::
-  KeyWait, Alt
-  if (A_PriorHotkey == A_ThisHotkey) && (400 > A_TimeSincePriorHotkey)
-    Run C:\Users\miyag\Desktop\App\shortcutkey\batFileSettings\Alt_x_2.bat
-return
+;;Alt::
+;;  KeyWait, Alt
+;;  if (A_PriorHotkey == A_ThisHotkey) && (400 > A_TimeSincePriorHotkey)
+;;    Run C:\Users\miyag\Desktop\App\shortcutkey\batFileSettings\Alt_x_2.bat
+;;return
 
 ;;??テスト？
 Ctrl & Alt::
